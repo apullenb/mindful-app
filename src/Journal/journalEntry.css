@@ -1,0 +1,12 @@
+
+.journal-entry {
+    background-color: floralwhite;
+}
+
+.back {
+
+background-image: url('./journal.jpg');
+background-repeat: no-repeat;
+background-size: contain;
+
+}

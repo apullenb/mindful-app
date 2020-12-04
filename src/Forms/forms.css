@@ -1,0 +1,121 @@
+
+form {
+    margin-left: 40%;
+    margin-right: 5%;
+    margin-bottom: 5px;
+    margin-top: 1%;
+    display: block;
+    align-content: center;
+	/* width: 550px; */
+	font-size: 16px;
+    background: #586d85a2;
+	padding: 20px 30px 15px 30px;
+    border: 2px solid #53687E;
+    box-shadow: #1c1d1da2 0px 6px 5px;
+}
+
+ form, input,
+ textarea, label, select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+    color: #fff;
+    
+}
+
+ label {
+    display:block;
+	margin: 15px;
+}
+
+ span{
+	display: block;
+	align-content: left;
+    width: 80%;
+}
+
+input {
+    background: transparent;
+	border: none;
+	border-bottom: 1px dashed #4f6b86;
+	display: block;
+	outline: none;
+	padding: 0px 0px 0px 0px;
+	font-style: italic;
+}
+input[type=range]{
+    -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 90%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+    
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #4f6b86;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+input[type=number]{
+    -webkit-appearance: none;
+    background-color: #486686b4;
+    margin-left: 4% ;
+    outline: #334758;
+    outline-style: solid;
+    outline-width: 1px;
+}
+textarea {
+    display: inline-block;
+    font-style: italic;
+    color: #91a7be;
+	padding: 20px 0px 0px 0px;
+	background: transparent;
+	outline: none;
+	border: none;
+	border-bottom: 1px dashed #4f6b86;
+    overflow: auto;
+	resize: both;
+    height:70px;
+    width:95%
+}
+select {
+    background: #4c6885 ;
+    border: none;
+    margin-bottom: 5px;
+	border-bottom: 2px dashed #4f6b86;
+	width: 90%;
+	outline: #4c6885;
+	padding: 2px 5px 0px 0px;
+	font-style: italic;
+}
+
+textarea:focus,
+ input:focus, select:focus {
+    border-bottom: 2px dashed #374c63;
+ }
+ button {
+    background: #576E86;
+	border: none;
+	padding: 8px 10px 8px 10px;
+	border-radius: 5px;
+	color: #A8BACE;
+ }
+ button:hover {
+    background: #202d3a;
+ }
+ .valueDis {
+    
+     font-size: 18px;
+     font-style: italic;
+ }
