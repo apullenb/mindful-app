@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {toast} from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import config from '../config'
 
 
@@ -27,7 +28,7 @@ function Register (props) {
             props.setAuth(true)
             } else {
                 props.setAuth(false)
-                toast.error(parseRes.error)
+                toast.info(parseRes.error)
             }
         }catch (err) {
             console.error(err.message)
@@ -35,7 +36,17 @@ function Register (props) {
     }
 return (
 <div>
-    <h1>Register</h1>
+    <section><ToastContainer position="top-center"
+autoClose={4968}
+hideProgressBar
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover/></section>
+    <h2>Register</h2>
+    <form>
         <label> Username: 
              <p><input type= "text" name="username" 
              value= {username} onChange={e=> onChange(e)} 
@@ -50,6 +61,7 @@ return (
             <p><input type= "password" name="confpass" />
             </p> </label> 
         <button onClick={onSubmit}>Create Account</button>
+        </form>
       </div>
 )
 }

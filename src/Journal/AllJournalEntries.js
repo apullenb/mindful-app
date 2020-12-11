@@ -33,24 +33,40 @@ class AllJournalEntries extends Component {
     render() {
      
     return (
-      <div className="journal-entries">
-        <Link to = {{pathname: '/NewJournalEntry', state: this.state.journal}}> <button><FontAwesomeIcon icon="plus" style={{fontSize: '13px'}} /> {''}Add New Journal Entry</button></Link>
-        <h3>{this.state.text}</h3>
+      <div className='all-journal'>
+        
+        <section className ='line'> My Journal
+        
+         </section>
+         <h3>{this.state.text}</h3>
+         
+         <section  className="journal-entries">
+         
           { this.state.Journal.map((entry) => { 
-      return <div style= {cardStyle} key= {entry.id}> <Entry journal={entry}/> </div>}
+      return <div key= {entry.id}> <Entry journal={entry}/> </div>}
           )}
-     
-   
-      
+       </section>
+       <section>
+       <Link to = {{pathname: '/NewJournalEntry', state: this.state.journal}}> <button style={{marginLeft:'1px'}}><FontAwesomeIcon icon="plus" style={{fontSize: '13px'}} /> Add New </button></Link>
+       </section>
        </div> 
     );
     }
-}
-const cardStyle = {
-  backgroundColor:'#01b8d8',
-  marginLeft:'18px',
-  paddingLeft:'5px',
-  paddingRight:'5px',
-  paddingTop:'0px',
+// }
+// const cardStyle = {
+//   display: 'inline-block',
+//   alignContent: 'center',
+//   marginTop: '10px',
+//  marginBottom:'5px',
+//  marginLeft: '5px',
+//  marginRight: '5px',
+  // display:'in-line block',
+  // display:'flex',
+  // flexDirection:'column',
+  // backgroundColor:'#01b8d8',
+  // marginLeft:'18px',
+  // paddingLeft:'5px',
+  // paddingRight:'5px',
+  // paddingTop:'0px',
 }
   export default AllJournalEntries;

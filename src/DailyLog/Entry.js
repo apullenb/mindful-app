@@ -25,8 +25,8 @@ function Entry(props) {
 const entryStyle={
     background: "#2C5281",
     color: 'white',
-    paddingLeft: "8px",
-    paddingRight:'8px',
+    paddingLeft: "15px",
+    paddingRight:'15px',
     paddingTop: '12px',
     paddingBottom: '12px',
     textAlign: "center",

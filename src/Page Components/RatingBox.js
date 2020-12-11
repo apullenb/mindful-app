@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from 'react';
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -6,9 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function RatingBox(props) {
+
+  
   const elements= props.rate
-  console.log('rating box', props)
-  const star= <FontAwesomeIcon icon="star" style={{color: 'yellow'}} />
+  console.log(props)
+  
+  const star= <FontAwesomeIcon icon="star" style={{color: 'yellow', fontSize:'22px', margin:'3px'}} />
   
   
     
@@ -23,15 +27,15 @@ function RatingBox(props) {
     } 
     rating = Math.round(rating) 
     const dateFormat = moment(date).format("LL")
-    return <div><h4>Your Best Day Was:</h4><p>{dateFormat}</p>
-    <p>Mood Rating: </p>
+    return <div style = {ratingBoxStyle}><p style={{fontWeight:'600'}}>{dateFormat}</p>
+    <p style={{fontWeight:'600'}}>Mood Rating: </p>
     {Array(rating).fill(star)}
     </div>
 }
     const string = bestRating()
     return (
       <div>
-      <span style = {ratingBoxStyle}>
+      <span>
           {string} 
        </span>
       </div>
@@ -40,13 +44,16 @@ function RatingBox(props) {
   
 
   const ratingBoxStyle = {
+    alignItems:'center',
     color:'white',
-    padding: "5px",
+    paddingTop: "15px",
+    paddingBottom: '15px',
+    paddingLeft:'20px',
+    paddingRight:'20px',
     textAlign: "center",
-    maxWidth: "50%",
     border: '2px dashed white',
-    // boxShadow: "0px 3px 3px black",
-    marginLeft:'30% '  
+    
+     
     
   }
  

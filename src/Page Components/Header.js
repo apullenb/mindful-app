@@ -9,8 +9,11 @@ function Header(props) {
 return(
        
     <div className="header">
+     
       <h1>Mindful</h1>
-      <p><Navbar setAuth={props.setAuth}/></p>
+      {props.isAuth === true ? 
+      <Navbar setAuth={props.setAuth}/> : ''  }
+      
     </div>
   );
 

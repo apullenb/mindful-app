@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import '../Forms/forms.css'
 import background from './journal.jpg'
-import config from '../config'
-
+import config from '../config';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {withRouter} from 'react-router';
 
 function NewJournalEntry (props) {
     const [inputs, setInputs] = useState({
@@ -18,32 +20,31 @@ console.log(props)
 
     const onSubmit = async e => {
         e.preventDefault();
-        
             const body = {mood, title, content}
             const token = localStorage.getItem('token')
             const response = await fetch(`${config.API_ENDPOINT}/api/journal`, {
                 method: "POST", headers: {"content-type" : "application/json", 'token': `${token}`}, body: JSON.stringify(body)
             })
             const parseRes = await response.json()
-            console.log(parseRes)
             if (!parseRes.error) {
-                alert('Success! Your Entry Has Been Posted')
+                toast.success('Success! Your Entry Has Been Posted')
+                props.history.push('/AllJournalEntries')
+
             } else {
+            toast.info(parseRes.error);
              console.error(parseRes.error) 
             } 
 
         }
-            
         
-    
-
-
 
     return (
-        <div>
-            <h2 style={{fontSize:'20', textAlign:'center', marginTop:'3%'}}>New Journal Entry</h2>
-            <p style={backimg}>
-            <form>
+        <div className='body'>
+            <section>
+                {/* <ToastContainer /> */}
+            <h2>New Journal Entry</h2>
+            
+            <form className='journal'>
                 <label> <span>Current Mood:</span>
                     <select name='mood' value= {mood} onChange={e=> onChange(e)} required>
                         <option>Choose One:</option>
@@ -65,16 +66,16 @@ console.log(props)
                 <button onClick= {onSubmit}>Submit</button>
                 </form>
                 <p>{' '}</p>
-                </p>
+                </section>
         </div>
     )}
 const backimg = {
     
-    background: `url(${background})`,
-    backgroundPosition:'left',
-    backgroundSize:'contain',
-    backgroundRepeat: 'no-repeat',
-    marginBottom:'25px'
+    // background: `url(${background})`,
+    // backgroundPosition:'center',
+    // backgroundSize:'fill',
+    // backgroundRepeat: 'no-repeat',
+    // marginBottom:'25px'
     
    
 }

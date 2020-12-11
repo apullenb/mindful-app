@@ -1,9 +1,10 @@
 import React from 'react';
 import LoginForm from '../Forms/LoginForm';
 import './Pages.css'
-
+import {Link} from 'react-router-dom'
 
 function Home() {
+
   return (
     <div className="page">
       <section className='home'>
@@ -43,7 +44,8 @@ function Home() {
         <header>
             <h3>Start Feeling Great Now!</h3>
         </header>
-          <button>Create Account</button> <button>Account Log In</button>
+         <Link to = {{pathname: '/register'}}><button>Create Account</button></Link> {' '}
+         <Link to = {{pathname: '/login'}}><button>Account Log In</button></Link>
         </div>
        
       </div>

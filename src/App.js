@@ -16,7 +16,9 @@ import ViewActivity from './DailyLog/ViewEntry';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus, faCoffee, faStar } from '@fortawesome/free-solid-svg-icons';
 import RatingBox from './Page Components/RatingBox'
-import config from './config'
+import config from './config';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './App.css'
 

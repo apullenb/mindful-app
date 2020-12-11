@@ -4,7 +4,7 @@ import Entry from './Entry'
 import {Link} from 'react-router-dom'
 import config from '../config'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import '../Pages/Pages.css'
 
 
 class AllEntryView extends Component {
@@ -30,32 +30,43 @@ class AllEntryView extends Component {
           })
     }
    
-      
+     
  
     render() {
     const log = this.state
       return (
-        <div className="dailylog-entries">
-          <span style={{textAlign:'center'}}><h3>Your Daily Activity Entries</h3></span>
-       
+        <div className="all">
+          <section>
+          </section>
+          <section className='headline'>
+            <div style={{paddingRight:'30px'}}><h3>Your Best Day Was:</h3><RatingBox rate={this.state.dailyLog} /></div>
+          {/* <div><Link to = {{pathname: '/lognewentry', state: log}}> <button><FontAwesomeIcon icon="plus" style={{fontSize:'14px'}} /> Record New Daily Entry</button></Link> </div> */}
+          
           <h3>{this.state.text}</h3>
-          <RatingBox rate={this.state.dailyLog} />
+          {/* </section>            
+            <section className=''> */}
+              <div className='headline' >
           {this.state.dailyLog.map((entry) => { 
-          return   <div style={cardStyle} key={entry.id}><Entry log= {entry}/></div>})}
-            <Link to = {{pathname: '/lognewentry', state: log}}> <button style={{marginLeft:'20%', marginRight:'20%', marginBottom:'5%', marginTop:'8%'}}><FontAwesomeIcon icon="plus" style={{fontSize:'14px'}} /> Record New Daily Entry</button></Link>
+          return  <div style={cardStyle} key={entry.id}><Entry log= {entry}/></div>})}
            
+           </div>
+            </section>
       </div>
       )
   
   }
 }
+// const rotate = Math.random() * 1.5
+
 const cardStyle = {
   
   display: 'inline-block',
   alignContent: 'center',
   marginTop: '10px',
  marginBottom:'10px',
- marginLeft: '5px',
- marginRight: '5px',
+ marginLeft: '15px',
+ marginRight: '15px',
+//  transform: `rotate(${rotate}deg)`
+
 }
   export default AllEntryView;
