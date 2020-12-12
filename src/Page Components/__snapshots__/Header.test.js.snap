@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="header"
+>
+  <h1>
+    Mindful
+  </h1>
+  
+</div>
+`;

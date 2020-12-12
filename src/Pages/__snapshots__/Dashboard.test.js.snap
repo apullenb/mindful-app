@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <section
+    className="hidden"
+  >
+    <button
+      onClick={[Function]}
+    >
+       
+       X 
+       
+       Close
+    </button>
+    
+     
+  </section>
+  <div
+    className="all"
+  >
+    <section
+      className="headline"
+    >
+      <h2>
+        Dashboard
+      </h2>
+      <h2>
+        Hello 
+        
+        !
+      </h2>
+      <div>
+        <p
+          style={
+            Object {
+              "color": "white",
+              "fontSize": "22px",
+              "fontWeight": "600",
+              "marginBottom": "10px",
+            }
+          }
+        >
+          Today is: 
+          December 11, 2020
+           
+        </p>
+        <p>
+          <button
+            onClick={[Function]}
+          >
+            Log Out
+          </button>
+        </p>
+      </div>
+    </section>
+    <section
+      className="row"
+    >
+      <section
+        className="today card"
+      >
+        <div>
+          <h3
+            style={
+              Object {
+                "color": "#174163",
+                "margin": "8px",
+                "textAlign": "center",
+              }
+            }
+          >
+            Your Day Today:
+          </h3>
+        </div>
+        <div>
+          <p>
+             
+          </p>
+          <div>
+            <h4
+              style={
+                Object {
+                  "margin": "10px",
+                  "padding": "5px",
+                  "textAlign": "center",
+                }
+              }
+            >
+              No Entries Yet Today
+            </h4>
+          </div>
+        </div>
+      </section>
+      <section
+        className=""
+      >
+        <div
+          id="title"
+        >
+          <h3
+            style={
+              Object {
+                "color": "#174163",
+                "margin": "8px",
+                "textAlign": "center",
+              }
+            }
+          >
+             Your Best Day Was:
+          </h3>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": "8px",
+              "textAlign": "center",
+            }
+          }
+        >
+          <div>
+            'Add Entries to View Rating'
+          </div>
+        </div>
+        <section>
+          <div
+            style={
+              Object {
+                "margin": "8px",
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "margin": "15px",
+                  "textAlign": "center",
+                }
+              }
+            >
+              View Previous Days
+            </button>
+          </div>
+          <div
+            style={
+              Object {
+                "margin": "8px",
+                "textAlign": "center",
+              }
+            }
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "margin": "15px",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Record New Activity
+            </button>
+          </div>
+        </section>
+      </section>
+    </section>
+  </div>
+  <section />
+</div>
+`;

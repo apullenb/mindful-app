@@ -7,7 +7,6 @@ import LoginForm from './Forms/LoginForm';
 import NewJournalEntry from './Journal/NewJournalEntry';
 import AllJournalEntries from './Journal/AllJournalEntries';
 import AllEntryView from './DailyLog/AllEntryView';
-import useLocalStorage from 'react-use-localstorage';
 import Dashboard from './Pages/Dashboard';
 import Register from './Forms/Register';
 import LogNewEntry from './DailyLog/LogNewEntry';
