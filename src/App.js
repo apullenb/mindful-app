@@ -28,11 +28,13 @@ const App = () => {
     isAuthCheck();
   }, []);
 
+  // Determines if a user is authorized or not and controls what info the user can view
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const setAuth = (boolean) => {
     setIsAuthenticated(boolean);
   };
 
+  //checks to see if the user is authorized before displaying private content
   async function isAuthCheck() {
     try {
       const response = await fetch(

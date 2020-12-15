@@ -12,7 +12,8 @@ function RatingBox(props) {
       style={{ color: "yellow", fontSize: "22px", margin: "3px" }}
     />
   );
-
+  
+  // Will calulate the average rating and determine which date had the highest rating (rounded up)
   function bestRating() {
     let rating = 0;
     let date = "";

@@ -34,6 +34,6 @@ const entryStyle = {
   textAlign: "center",
   boxShadow: "0px 5px 3px black",
   margin: "3px",
-  // transform: "rotate(-1deg)"
+  
 };
 export default Entry;
