@@ -1,27 +1,41 @@
-import React, {Component, useContext, Fragment, useState, useEffect} from 'react';
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom' 
-import Header from './Page Components/Header';
-import Footer from './Page Components/Footer';
-import Home from './Pages/Home';
-import LoginForm from './Forms/LoginForm';
-import NewJournalEntry from './Journal/NewJournalEntry';
-import AllJournalEntries from './Journal/AllJournalEntries';
-import AllEntryView from './DailyLog/AllEntryView';
-import Dashboard from './Pages/Dashboard';
-import Register from './Forms/Register';
-import LogNewEntry from './DailyLog/LogNewEntry';
-import ViewEntry from './Journal/ViewEntry';
-import ViewActivity from './DailyLog/ViewEntry';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faPlus, faCoffee, faStar, faBars } from '@fortawesome/free-solid-svg-icons';
-import config from './config';
+import React, {
+  Component,
+  useContext,
+  Fragment,
+  useState,
+  useEffect,
+} from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Header from "./Page Components/Header";
+import Footer from "./Page Components/Footer";
+import Home from "./Pages/Home";
+import LoginForm from "./Forms/LoginForm";
+import NewJournalEntry from "./Journal/NewJournalEntry";
+import AllJournalEntries from "./Journal/AllJournalEntries";
+import AllEntryView from "./DailyLog/AllEntryView";
+import Dashboard from "./Pages/Dashboard";
+import Register from "./Forms/Register";
+import LogNewEntry from "./DailyLog/LogNewEntry";
+import ViewEntry from "./Journal/ViewEntry";
+import ViewActivity from "./DailyLog/ViewEntry";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faPlus,
+  faCoffee,
+  faStar,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
+import config from "./config";
 
+import "./App.css";
 
-import './App.css'
+library.add(faPlus, faCoffee, faStar, faBars);
 
-library.add(faPlus, faCoffee, faStar, faBars)
-
- 
 const App = () => {
   useEffect(() => {
     isAuthCheck();

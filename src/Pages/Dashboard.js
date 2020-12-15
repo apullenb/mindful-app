@@ -115,11 +115,13 @@ const Dashboard = (props) => {
   }
 
   function showJournal() {
-    journal === "hiddenz" ? setJournal("expand-journal") : setJournal("hiddenz");
+    journal === "hiddenz"
+      ? setJournal("expand-journal")
+      : setJournal("hiddenz");
   }
 
   // end of popup componentes
-console.log(journal)
+
   const logout = (e) => {
     e.preventDefault();
     localStorage.removeItem("token");
