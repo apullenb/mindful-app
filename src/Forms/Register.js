@@ -16,6 +16,9 @@ function Register(props) {
     e.preventDefault();
     try {
       const body = { username, password };
+      if (!username || !password) {
+        alert('Username and Password Must Not Be Blank!')
+      }
       const response = await fetch(
         `${config.API_ENDPOINT}/api/users/register`,
         {

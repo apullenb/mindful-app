@@ -9,7 +9,7 @@ function RatingBox(props) {
   const star = (
     <FontAwesomeIcon
       icon="star"
-      style={{ color: "yellow", fontSize: "22px", margin: "3px" }}
+      style={{ color: "yellow", fontSize: "22px", margin: "3px" }} 
     />
   );
   
@@ -40,8 +40,8 @@ function RatingBox(props) {
     const dateFormat = moment(date).format("LL");
     return (
       <div style={ratingBoxStyle}>
-        <p style={{ fontWeight: "600" }}>{dateFormat}</p>
-        <p style={{ fontWeight: "600" }}>Mood Rating: </p>
+        <p key='5' style={{ fontWeight: "600" }}>{dateFormat}</p>
+        <p key='3' style={{ fontWeight: "600" }}>Mood Rating: </p>
         {Array(rating).fill(star)}
       </div>
     );

@@ -5,10 +5,11 @@ import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar(props) {
-  const [nav, setNav] = useState("hidden");
-
+  const [nav, setNav] = useState("show-nav mobile");
+console.log(nav)
   function displayNav() {
-    nav === "hidden" ? setNav("show-nav") : setNav("hidden");
+    nav === "show-nav mobile" ? setNav("show-nav") : setNav("hidden");
+    nav === 'hidden' ? setNav('show-nav') : setNav('hidden')
   }
   const logout = (e) => {
     e.preventDefault();

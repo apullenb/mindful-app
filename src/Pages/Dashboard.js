@@ -13,7 +13,7 @@ const Dashboard = (props) => {
   const [all, setAll] = useState("");
   const [popup, setPopup] = useState("hidden");
   const [component, setComponent] = useState("");
-  const [journal, setJournal] = useState("hidden");
+  const [journal, setJournal] = useState("hiddenz");
 
   //Displays today's date
   let newDate = new Date();
@@ -115,11 +115,11 @@ const Dashboard = (props) => {
   }
 
   function showJournal() {
-    journal === "hidden" ? setJournal("expand-journal") : setJournal("hidden");
+    journal === "hiddenz" ? setJournal("expand-journal") : setJournal("hiddenz");
   }
 
   // end of popup componentes
-
+console.log(journal)
   const logout = (e) => {
     e.preventDefault();
     localStorage.removeItem("token");

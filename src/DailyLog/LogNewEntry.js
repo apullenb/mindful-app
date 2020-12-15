@@ -1,11 +1,13 @@
 import react, { useState } from "react";
+import { Redirect } from 'react-router';
 import "../Forms/forms.css";
 import config from "../config";
 
 function LogNewEntry(props) {
+ 
   const [inputs, setInputs] = useState({
-    medicine: "",
-    hours_slept: "0",
+    medicine:'',
+    hours_slept: '0',
     food: "",
     sugar_intake: "0",
     rate_focus: "3",
@@ -28,6 +30,7 @@ function LogNewEntry(props) {
 
   const closeForm = () => {
     props.close("hidden");
+
   };
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -40,6 +43,9 @@ function LogNewEntry(props) {
       rate_happiness,
       rate_energy,
     };
+    if (medicine === '' || food === '' || hours_slept === '0') {
+      return alert('Please fill out all fields')
+    }
     const token = localStorage.getItem("token");
     const response = await fetch(`${config.API_ENDPOINT}/api/activity`, {
       method: "POST",
@@ -47,12 +53,15 @@ function LogNewEntry(props) {
       body: JSON.stringify(body),
     });
     const parseRes = await response.json();
-    if (!parseRes.error) {
-      alert("Success! Your Entry Has Been Posted");
-      props.close("hidden");
-    } else {
-      console.error(parseRes.error);
+    if (parseRes.error) {
       alert(parseRes.error);
+      console.error(parseRes.error);
+     
+    } else {
+      alert('Success! Your Entry Has Been Posted!');
+      closeForm();
+      <Redirect to="/AllEntryView" />;
+      
     }
   };
 
@@ -67,7 +76,7 @@ function LogNewEntry(props) {
           name="hours_slept"
           onChange={(e) => onChange(e)}
           value={hours_slept}
-          required
+          
         />
         <label>
           <span>What Medicine(s) Did You Take Today?</span>
@@ -83,6 +92,7 @@ function LogNewEntry(props) {
           <span>What Did You Eat Today?</span>
           <textarea
             name="food"
+            required
             onChange={(e) => onChange(e)}
             value={food}
             rows="5"

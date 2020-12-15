@@ -11,10 +11,10 @@
   flex-wrap: wrap;
   font-size: 35px;  
   color: white;
-  padding-top: 2%;
-  padding-bottom: 5%; 
+  padding-top: 10px;
+  padding-bottom: 15px; 
   padding-left: 2%;
-  margin-bottom: 1%;
+  margin-bottom: 25px;
 }
 /* .Navbar {
   position: fixed;
@@ -32,24 +32,26 @@
 .nav {
   display: block;
   float: right;
-  width: 175px;
+  width: 225px;
   height: 180px;
-line-height: 29px;
+line-height: 33px;
 font-family: sans-serif;
 text-decoration: none;
 text-align: center;
 color: rgb(255, 255, 255);
 border: 1px solid rgb(221, 219, 219);
+border-radius: 15px;
 letter-spacing: 2px;
 padding-left: 8px;
 padding-right:3px;
 padding-top:10px;
 padding-bottom:5px;
-margin: 0px;
+margin: 3px;
+margin-bottom:5px;
 background-color: #01b8d8
 
 } 
-.show-nav a {
+.nav a {
   margin-top: 1px;
   display: block;
   font-size: 18px;
@@ -68,8 +70,8 @@ transition: all .35s;
   background-color:  #f7f7f7;
   padding-left:15px;
   padding-right: 15px;
-  padding-top:8px;
-  padding-bottom:8px;
+  padding-top:10px;
+  padding-bottom:10px;
   font-size: 24px;
   border-radius: 8px;
   border-bottom: 1px solid white;
@@ -78,10 +80,10 @@ transition: all .35s;
 .nav-button:hover {
   background-color: #01b8d8;
   color: #043942;
-  padding-left:18px;
-  padding-right: 18px;
-  padding-top:8px;
-  padding-bottom:8px;
+  padding-left:16px;
+  padding-right: 16px;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 
 .nav a:hover {
@@ -162,6 +164,8 @@ cursor: pointer;
     padding-bottom:8px;
   }
   
-  
+  .mobile {
+    display:none
+  }
 }
 

@@ -14,7 +14,6 @@ import ViewEntry from './Journal/ViewEntry';
 import ViewActivity from './DailyLog/ViewEntry';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus, faCoffee, faStar, faBars } from '@fortawesome/free-solid-svg-icons';
-import RatingBox from './Page Components/RatingBox'
 import config from './config';
 
 
