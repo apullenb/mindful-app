@@ -2,19 +2,15 @@
 
 exports[`renders the UI as expected 1`] = `
 <div
-  className=""
+  className="header"
 >
   <section
     className=""
   >
      
   </section>
-  <section
-    className="header"
-  >
-    <h1>
-      Mindful
-    </h1>
-  </section>
+  <h1>
+    Mindful
+  </h1>
 </div>
 `;

@@ -72,3 +72,12 @@
     font-weight: 600;
     color: white;
 }
+
+@media all and (max-width: 850px) {
+
+    .entry-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

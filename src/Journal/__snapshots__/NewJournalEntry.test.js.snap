@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="body"
+>
+  <section>
+    <h2>
+      New Journal Entry
+    </h2>
+    <form
+      className="journal"
+    >
+      <label>
+         
+        <span>
+          Current Mood:
+        </span>
+        <select
+          name="mood"
+          onChange={[Function]}
+          required={true}
+          value=""
+        >
+          <option>
+            Choose One:
+          </option>
+          <option>
+            Happy
+          </option>
+          <option>
+            Excited
+          </option>
+          <option>
+            Hopeful
+          </option>
+          <option>
+            Frustrated
+          </option>
+          <option>
+            Angry
+          </option>
+          <option>
+            Depressed
+          </option>
+        </select>
+      </label>
+      <label>
+         
+        <span>
+          Entry Title:
+        </span>
+        <input
+          name="title"
+          onChange={[Function]}
+          placeholder="I am feeling...!"
+          type="text"
+          value=""
+        />
+      </label>
+      <label>
+         
+        <span>
+          Journal Entry Content:
+        </span>
+        <textarea
+          cols="50"
+          name="content"
+          onChange={[Function]}
+          placeholder="This is what happened today!..."
+          rows="100"
+          value=""
+        />
+      </label>
+      <button
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </form>
+    <p>
+       
+    </p>
+  </section>
+</div>
+`;

@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <form
+    className="log"
+  >
+    <label>
+      <span>
+        How Many Hours Did You Sleep Last Night?
+      </span>
+    </label>
+    <input
+      name="hours_slept"
+      onChange={[Function]}
+      required={true}
+      type="number"
+      value="0"
+    />
+    <label>
+      <span>
+        What Medicine(s) Did You Take Today?
+      </span>
+    </label>
+    <input
+      name="medicine"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+    <label>
+      <span>
+        What Did You Eat Today?
+      </span>
+      <textarea
+        cols="25"
+        name="food"
+        onChange={[Function]}
+        rows="5"
+        value=""
+      />
+    </label>
+    <label>
+      <span>
+        How Many Servings of Sugar Did You Eat Today?
+      </span>
+      <span>
+        (From 0-5)
+      </span>
+    </label>
+    <input
+      max="5"
+      min="0"
+      name="sugar_intake"
+      onChange={[Function]}
+      type="range"
+      value="0"
+    />
+    <p
+      className="valueDis"
+    >
+      (
+      0
+       servings)
+    </p>
+    <label>
+      <span>
+        Rate Your Focus Today
+      </span>
+    </label>
+    <input
+      max="5"
+      min="0"
+      name="rate_focus"
+      onChange={[Function]}
+      type="range"
+      value="3"
+    />
+    <p
+      className="valueDis"
+    >
+      3
+    </p>
+    <label>
+      <span>
+        Rate Your Happiness Today
+      </span>
+    </label>
+    <input
+      max="5"
+      min="0"
+      name="rate_happiness"
+      onChange={[Function]}
+      type="range"
+      value="3"
+    />
+    <p
+      className="valueDis"
+    >
+      3
+    </p>
+    <label>
+      <span>
+        Rate Your Energy Level Today
+      </span>
+    </label>
+    <input
+      max="5"
+      min="0"
+      name="rate_energy"
+      onChange={[Function]}
+      type="range"
+      value="3"
+    />
+    <p
+      className="valueDis"
+    >
+      3
+    </p>
+    <p>
+      <button
+        onClick={[Function]}
+      >
+         Submit
+      </button>
+       
+      <button
+        onClick={[Function]}
+      >
+         Close 
+         
+      </button>
+    </p>
+  </form>
+</div>
+`;

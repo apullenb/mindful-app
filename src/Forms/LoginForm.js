@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import config from "../config";
 import { Link } from "react-router-dom";
 
@@ -31,7 +29,7 @@ function LoginForm({ setAuth }) {
         setAuth(true);
       } else {
         setAuth(false);
-        toast.info(parseRes.error);
+        alert(parseRes.error);
       }
     } catch (err) {
       console.error(err.message);
@@ -39,19 +37,6 @@ function LoginForm({ setAuth }) {
   };
   return (
     <div>
-      <section className="toast">
-        <ToastContainer
-          position="top-center"
-          autoClose={4968}
-          hideProgressBar
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
-      </section>
       <h2>Login</h2>
       <form>
         <label>

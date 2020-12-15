@@ -1,11 +1,11 @@
-
 .all {
-    display: flex;
-    flex-direction: column;
-    /* background-color: #01b8d8;  */
-    border: 0px solid white;
-    border-radius: 15px;
-    margin-bottom: 25px
+  display: flex;
+  flex-direction: column;
+  /* background-color: #01b8d8;  */
+  border: 0px solid white;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  margin-top: 15px;
 }
 /* h1 {
     font-size: 55px;
@@ -14,28 +14,27 @@
     align-content: center;
 } */
 
- .headline h2{
-    color: #ffffff;
-    font-size: 35px;
-    
- }
+.headline h2 {
+  color: #ffffff;
+  font-size: 35px;
+}
 h3 {
-font-size: 30px;
-font-weight: 700;
-color:  #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
 }
-h4{
-    font-size: 20px;
-    margin-top: 2px;
-    margin-bottom: 1px;
+h4 {
+  font-size: 20px;
+  margin-top: 2px;
+  margin-bottom: 1px;
 }
-h5{
-    font-size: 18px;
-    margin:1px;
+h5 {
+  font-size: 18px;
+  margin: 1px;
 }
-p{
-    font-size: 18px;
-    margin: 1px;
+p {
+  font-size: 18px;
+  margin: 1px;
 }
 
 /* .row { 
@@ -47,46 +46,43 @@ p{
     
    } */
 .headline {
-    display: flex; 
-    flex-wrap: wrap;
-    padding: 15px;
-    justify-content: space-around;
-    align-content: flex-start;
-    background-color: #01b8d8; 
-    border: 1px;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 6px;
-    margin-right: 6px;
-   
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: space-around;
+  align-content: flex-start;
+  background-color: #01b8d8;
+  border: 1px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .today {
-    display: flex; 
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: space-between;
-    align-content: center;
-    background-color:azure;
-    border: 1px;
-    border-radius: 20px;
-    margin-bottom: 3%
-
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-content: center;
+  background-color: azure;
+  border: 1px;
+  border-radius: 20px;
+  margin-bottom: 3%;
 }
 .today div {
-    margin: 2px;
-    padding: 2px;
+  margin: 2px;
+  padding: 2px;
 }
 .today #title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #174163;
-    border-bottom: 1px solid white;
-    margin-bottom:5px;
-
+  font-size: 20px;
+  font-weight: 700;
+  color: #174163;
+  border-bottom: 1px solid white;
+  margin-bottom: 5px;
 }
 /* .col1 {
     background-color:#01b8d8;
@@ -98,60 +94,159 @@ p{
     align-content: center;
 } */
 .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    /* margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* margin-left: 10px;
     margin-right: 10px; */
-    align-content: center;
-    background-color: #01b8d8; 
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 6px;
-    margin-right: 6px;
-} 
-
-
-.headline button, .today button {
-    
-    background-color: floralwhite;
-    color: #0b1f3a;
-    border: 0px solid white;
-    border-radius: 17px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-right: 28px;
-    padding-left: 28px;
-    text-align: center;
-    box-shadow: rgb(54, 54, 54) 0 1px 2px 0;
-    margin-top: 13px;
-    /* margin-bottom: 5px; */
-    font-family: Arial, Helvetica, sans-serif; 
-    font-weight: 600;
-    font-size: 16px;
+  align-content: center;
+  background-color: #01b8d8;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
-.headline button:hover, .today button:hover {
-background-color: #0b1f3a;
-color: floralwhite;
-cursor :pointer;
-padding:18x;
-box-shadow: rgb(54, 54, 54) 0 3px 4px 0;
-margin: 10px
+.headline button,
+.today button {
+  background-color: floralwhite;
+  color: #0b1f3a;
+  border: 0px solid white;
+  border-radius: 17px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 28px;
+  padding-left: 28px;
+  text-align: center;
+  box-shadow: rgb(54, 54, 54) 0 1px 2px 0;
+  margin-top: 13px;
+  /* margin-bottom: 5px; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.headline button:hover,
+.today button:hover {
+  background-color: #0b1f3a;
+  color: floralwhite;
+  cursor: pointer;
+  box-shadow: rgb(54, 54, 54) 0 2px 4px 0;
 }
 
 .show {
- height: 100%;
+  height: 100%;
   position: absolute;
-  width: 50%; 
+  width: 50%;
   margin-left: 8%;
   margin-right: 30%;
-  margin-top:-10%;
+  margin-top: -10%;
+}
+.show-journal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  background-color: #82cfe4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  font-size: 28px;
+  color: #033755;
+  font-weight: 700;
+  border: 2px dashed white;
+  border-radius: 6px;
+  margin-left: 10%;
+  margin-top: 15px;
 }
 
+.show-journal:hover {
+  background-color: #033755;
+  color: white;
+}
+.show-journal p {
+  font-size: 16px;
+  color: white;
+  padding: 2px;
+}
 .hidden {
-    display: none;
-    z-index: 1;
+  display: none;
+  z-index: 1;
+}
+
+.expand-journal h6 {
+  width: 150px;
+  float: center;
+  margin-top: 5px;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  padding: 5px;
+  background-color: #022e47;
+  border: 1px solid white;
+}
+.expand-journal h6:hover {
+  background-color: #c6e5ee;
+  color: #033755;
+}
+@media all and (max-width: 800px) {
+  .show {
+    height: 100%;
+    position: absolute;
+    width: 95%;
+    margin-left: 4%;
+    margin-right: 8%;
+    margin-top: -10%;
+  }
+
+  .headline button,
+  .today button {
+    font-size: 18px;
+  }
+  .headline {
+    padding: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .today {
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: space-between;
+    align-content: center;
+    border: 1px;
+    border-radius: 20px;
+    margin-bottom: 3%;
+  }
+  .today div {
+    margin: 2px;
+    padding: 2px;
+  }
+  .show-journal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    background-color: #82cfe4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    font-size: 28px;
+    color: #033755;
+    font-weight: 700;
+    border: 2px dashed white;
+    border-radius: 6px;
+    margin-left: 10%;
+    margin-top: 15px;
+  }
+  .show-journal p {
+    font-size: 16px;
+    color: white;
+    padding: 1px;
+  }
 }

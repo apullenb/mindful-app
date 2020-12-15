@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <h2>
+    Register
+  </h2>
+  <form>
+    <label>
+       Username:
+      <p>
+        <input
+          name="username"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </p>
+       
+    </label>
+    <label>
+       Password:
+      <p>
+        <input
+          name="password"
+          onChange={[Function]}
+          type="password"
+          value=""
+        />
+      </p>
+       
+    </label>
+    <label>
+       Confirm Password:
+      <p>
+        <input
+          name="confpass"
+          type="password"
+        />
+      </p>
+       
+    </label>
+    <button
+      onClick={[Function]}
+    >
+      Create Account
+    </button>
+  </form>
+</div>
+`;

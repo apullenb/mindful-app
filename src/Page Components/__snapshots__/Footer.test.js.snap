@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="footer"
+  style={
+    Object {
+      "backgroundColor": "gray",
+      "border": "1px solid black",
+      "boxSizing": "border-box",
+      "marginTop": "2px",
+      "padding": "20px",
+      "textAlign": "left",
+    }
+  }
+>
+  <p>
+    @mindful | 2020
+  </p>
+</div>
+`;

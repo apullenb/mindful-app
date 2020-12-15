@@ -1,25 +1,49 @@
-import React from 'react';
-import { Link} from 'react-router-dom';
-import './Header.css';
-
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar(props) {
- console.log(props)
+  const [nav, setNav] = useState("hidden");
 
+  function displayNav() {
+    nav === "hidden" ? setNav("show-nav") : setNav("hidden");
+  }
+  const logout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem("token");
+    props.setAuth(false);
+  };
 
   return (
-    <div className="Navbar">
-       <nav role="navigation">
-        <Link to ="/Dashboard">  Dashboard |</Link>
-        <Link to ="/AllEntryView"> View All Days |</Link>
-        {/* <Link to="/LogNewEntry"> New Log Entry |</Link> */}
-        {/* <Link to="/NewJournalEntry"> Journal Entry |</Link> */}
-        <Link to="/AllJournalEntries"> Journal | </Link>
-        <a>LogOut</a>
-        
-        
-        
-    </nav>
+    <div>
+      <button className="nav-button" onClick={displayNav}>
+        <FontAwesomeIcon icon="bars" />{" "}
+      </button>
+      <div className={nav}>
+        <section className="nav">
+          <nav role="navigation">
+            <Link to="/Dashboard"> Dashboard </Link>
+            <Link to="/AllEntryView"> View All Days </Link>
+            <Link to="/AllJournalEntries"> Journal </Link>
+            <a onClick={logout}>LogOut</a>
+            <button
+              className="nav-button"
+              style={{
+                padding: "3px",
+                fontSize: "14px",
+                marginTop: "8px",
+                marginBottom: "1px",
+              }}
+              onClick={displayNav}
+            >
+              {" "}
+              X Close{" "}
+            </button>
+          </nav>
+        </section>
+      </div>
     </div>
   );
 }

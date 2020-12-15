@@ -42,7 +42,7 @@ exports[`renders the UI as expected 1`] = `
           }
         >
           Today is: 
-          December 11, 2020
+          December 14, 2020
            
         </p>
         <p>
