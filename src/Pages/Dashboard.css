@@ -55,7 +55,7 @@ p {
   border: 1px;
   border-radius: 20px;
   margin-top: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   margin-left: 0px;
   margin-right: 0px;
  
@@ -65,8 +65,8 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
   justify-content: space-between;
   align-content: center;
   background-color: azure;
@@ -75,8 +75,8 @@ p {
   margin-bottom: 5px;
 }
 .today div {
-  margin: 2px;
-  padding: 2px;
+  margin: 1px;
+  padding: 1px;
 }
 .today #title {
   font-size: 18px;
@@ -139,12 +139,12 @@ p {
 }
 
 .show {
-  height: 100%;
-  position: absolute;
-  width: 50%;
+  /* height: 100%;
+  position: absolute; */
+  /* width: 50%; */
   margin-left: 8%;
-  margin-right: 30%;
-  margin-top: -10%;
+  margin-right: 3%;
+  margin-top: 5px;
 }
 .show-journal {
   display: flex;
@@ -176,12 +176,7 @@ p {
   padding: 2px;
 }
 .hiddenz {
- position: absolute;
- right:5px;
- bottom:1%;
-z-index: 1;
-  width: 1%;
-  transition: all 1.5s ease-in;
+ display:none
 }
 .expand-journal {
 position: absolute;
@@ -190,7 +185,7 @@ z-index: 1;
 right: 5px;
 top:1%;
 width: 60%;
-transition: all 1.5s ease-out;
+transition: all .75s ease-out;
 
 }
 .expand-journal h6 {
@@ -203,6 +198,7 @@ transition: all 1.5s ease-out;
   padding: 5px;
   background-color: #022e47;
   border: 1px solid white;
+  border-radius: 15px;
 }
 .expand-journal h6:hover {
   background-color: #c6e5ee;
@@ -212,12 +208,10 @@ transition: all 1.5s ease-out;
 
 @media all and (max-width: 800px) {
   .show {
-    height: 100%;
-    position: absolute;
     width: 95%;
     margin-left: 4%;
     margin-right: 8%;
-    margin-top: -10%;
+    margin-top: 0%;
   }
 
   .headline button,
@@ -237,8 +231,8 @@ transition: all 1.5s ease-out;
     padding: 2px;
   }
   .today {
-    padding-left: 18%;
-    padding-right: 25%;
+    padding-left: 10%;
+    padding-right: 15%;
     justify-content: space-between;
     align-content: center;
     border: 1px;
@@ -250,7 +244,6 @@ transition: all 1.5s ease-out;
     padding: 1px;
   }
   .show-journal {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,8 +272,8 @@ transition: all 1.5s ease-out;
     z-index: 1;
     right: 10px;
     bottom:2%;
-    width: 95%;
-    transition: all 1s ease-in;
+    width: 75%;
+    transition: all .75s ease-in;
 }
 .row {
   margin-top: 5px;

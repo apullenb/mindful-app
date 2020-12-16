@@ -3,7 +3,7 @@
   background-color: #0b1f3a;
   color: #b8b6b6;
   font-family: var(--custom-font);
-  text-shadow: 0 px 0px 4px 3px rgb(43, 42, 42);
+  text-shadow: 0px 0px 4px 3px rgb(43, 42, 42);
   display: flex; 
   flex-direction: row;
   align-items: center;
@@ -14,7 +14,7 @@
   padding-top: 10px;
   padding-bottom: 15px; 
   padding-left: 2%;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 /* .Navbar {
   position: fixed;
@@ -31,30 +31,31 @@
 }
 .nav {
   display: block;
-  float: right;
+  float: left;
   width: 225px;
   height: 180px;
-line-height: 33px;
+line-height: 37px;
 font-family: sans-serif;
 text-decoration: none;
 text-align: center;
 color: rgb(255, 255, 255);
 border: 1px solid rgb(221, 219, 219);
 border-radius: 15px;
-letter-spacing: 2px;
-padding-left: 8px;
-padding-right:3px;
+letter-spacing: 3px;
+padding-left: 5px;
+padding-right:5px;
 padding-top:10px;
-padding-bottom:5px;
+padding-bottom:2px;
 margin: 3px;
-margin-bottom:5px;
+margin-bottom:2px;
+margin-top: 3px;
 background-color: #01b8d8
 
 } 
 .nav a {
   margin-top: 1px;
   display: block;
-  font-size: 18px;
+  font-size: 19px;
 font-family: sans-serif;
 text-decoration: none;
   text-decoration: none;
@@ -64,6 +65,7 @@ padding-right:12px;
 padding-top:2px;
 padding-bottom:2px;
 transition: all .35s;  
+border-bottom: 1px solid white
 }
 
 .nav-button {
@@ -75,6 +77,8 @@ transition: all .35s;
   font-size: 24px;
   border-radius: 8px;
   border-bottom: 1px solid white;
+  margin-left:2%;
+  margin-top:2%;
 }
 
 .nav-button:hover {

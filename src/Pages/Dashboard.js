@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect, Component } from "react";
+import { Link } from "react-router-dom";
 import AllEntryView from "../DailyLog/AllEntryView";
 import AllJournalEntries from "../Journal/AllJournalEntries";
 import RatingBox from "../Page Components/RatingBox";
@@ -56,8 +57,10 @@ const Dashboard = (props) => {
     if (today === "" || today === undefined) {
       return (
         <div>
-          <h4 style={{ textAlign: "center", margin: "10px", padding: "5px" }}>
-            No Entries Yet Today
+          <h4 style={{ textAlign: "center", margin: "1px", padding: "1px" }}>
+            No Entries Yet Today.
+            <p> Don't forget to record your entry for today!</p>
+            <p>{' '}</p>
           </h4>
         </div>
       );
@@ -100,27 +103,33 @@ const Dashboard = (props) => {
     }
   }
 
-  // The following functions control popup components using state
+  // The following functions control popup/expanding components using state
   function showActivityForm() {
     setPopup("show");
     setComponent(<LogNewEntry close={setPopup} />);
+    getToday();
+    
   }
   function showPreviousDay() {
     setPopup("show");
     setComponent(<AllEntryView close={setPopup} />);
+    getToday();
   }
 
   function closeButton() {
     setPopup("hidden");
+    getToday();
+   
   }
 
   function showJournal() {
     journal === "hiddenz"
       ? setJournal("expand-journal")
       : setJournal("hiddenz");
+      getToday();
   }
 
-  // end of popup componentes
+  // end of popup components 
 
   const logout = (e) => {
     e.preventDefault();
@@ -135,10 +144,7 @@ const Dashboard = (props) => {
 
   return (
     <div>
-      <section className={popup}>
-        <button onClick={closeButton}> X Close</button>
-        {component}{" "}
-      </section>
+     
       <div className="all">
         <section className="headline">
           <h2>Dashboard</h2>
@@ -159,6 +165,10 @@ const Dashboard = (props) => {
             </p>
           </div>
         </section>
+        <section className={popup} >
+        <button onClick={closeButton}> X Close</button>
+        {component}{" "}
+      </section>
         <section className="row">
           <section className="today card">
             <div>
@@ -195,24 +205,24 @@ const Dashboard = (props) => {
                 </button>
               </div>
               <div style={{ margin: "8px", textAlign: "center" }}>
-                <button
-                  style={{ margin: "15px", textAlign: "center" }}
-                  onClick={showActivityForm}
-                >
+              <Link
+            to={{ pathname: "/LogNewEntry"}}>  <button style={{ margin: "15px", textAlign: "center" }} >
                   Record New Activity
-                </button>
+                </button></Link>
               </div>
             </section>
           </section>
         </section>
+        
         <section className="new">
           <div className="show-journal" onClick={showJournal}>
             {name}'s JOURNAL
             <p>Click to View Your Journal Entries</p>
           </div>
-          <section className={journal}>
+          <section className={journal} >
             <h6 onClick={showJournal}> X Close</h6>
             <AllJournalEntries />
+            <h6 onClick={showJournal}> X Close</h6>
           </section>
         </section>
       </div>

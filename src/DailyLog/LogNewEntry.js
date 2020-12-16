@@ -4,6 +4,7 @@ import "../Forms/forms.css";
 import config from "../config";
 
 function LogNewEntry(props) {
+  
   const [inputs, setInputs] = useState({
     medicine: "",
     hours_slept: "0",
@@ -27,9 +28,7 @@ function LogNewEntry(props) {
   const onChange = (e) =>
     setInputs({ ...inputs, [e.target.name]: e.target.value });
 
-  const closeForm = () => {
-    props.close("hidden");
-  };
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const body = {
@@ -56,13 +55,16 @@ function LogNewEntry(props) {
       console.error(parseRes.error);
     } else {
       alert("Success! Your Entry Has Been Posted!");
-      closeForm();
-      <Redirect to="/AllEntryView" />;
+      props.history.push("/AllEntryView");
+      
     }
   };
 
   return (
     <div>
+      <section>
+        <h3 style={{textAlign:'center'}}>What Did You Do Today? </h3>
+      </section>
       <form className="log">
         <label>
           <span>How Many Hours Did You Sleep Last Night?</span>
@@ -107,8 +109,11 @@ function LogNewEntry(props) {
           value={sugar_intake}
         />
         <p className="valueDis">({sugar_intake} servings)</p>
-        <label>
-          <span>Rate Your Focus Today</span>
+          </form>
+          <h3 style={{textAlign:'center'}}>How Did You Feel Today? </h3>
+          <form className ='log'>
+          <label>
+          <span>Rate Your Focus</span>
         </label>
         <input
           type="range"
@@ -120,7 +125,7 @@ function LogNewEntry(props) {
         />
         <p className="valueDis">{rate_focus}</p>
         <label>
-          <span>Rate Your Happiness Today</span>
+          <span>Rate Your Happiness</span>
         </label>
         <input
           type="range"
@@ -132,7 +137,7 @@ function LogNewEntry(props) {
         />
         <p className="valueDis">{rate_happiness}</p>
         <label>
-          <span>Rate Your Energy Level Today</span>
+          <span>Rate Your Energy Level</span>
         </label>
         <input
           type="range"
@@ -144,8 +149,8 @@ function LogNewEntry(props) {
         />
         <p className="valueDis">{rate_energy}</p>
         <p>
-          <button onClick={onSubmit}> Submit</button>{" "}
-          <button onClick={closeForm}> Close </button>
+          <button style={{float:'right', margin:'10px'}} onClick={onSubmit}> Submit</button>{" "}
+         
         </p>
       </form>
     </div>

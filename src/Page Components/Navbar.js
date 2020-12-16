@@ -22,26 +22,14 @@ function Navbar(props) {
       <button className="nav-button" onClick={displayNav}>
         <FontAwesomeIcon icon="bars" />{" "}
       </button>
-      <div className={nav}>
-        <section className="nav">
-          <nav role="navigation">
+      <div className={nav} onMouseLeave={displayNav}>
+        <section className="nav" >
+          <nav role="navigation" >
             <Link to="/Dashboard"> Dashboard </Link>
             <Link to="/AllEntryView"> View All Days </Link>
             <Link to="/AllJournalEntries"> Journal </Link>
             <a onClick={logout}>LogOut</a>
-            <button
-              className="nav-button"
-              style={{
-                padding: "3px",
-                fontSize: "14px",
-                marginTop: "8px",
-                marginBottom: "1px",
-              }}
-              onClick={displayNav}
-            >
-              {" "}
-              X Close{" "}
-            </button>
+           
           </nav>
         </section>
       </div>
