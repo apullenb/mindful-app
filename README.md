@@ -66,7 +66,7 @@ Retrieves all of the user's daily activity logs. Returns a response like the fol
 <ul>
 <li>Node for interacting with the file system</li> 
 <li>Express for handling API requests</li> 
-<li>Knex.js for interfacing with the PostgreSQL database</li> 
+<li>Knex.js for interacting with the PostgreSQL database</li> 
 <li>Postgrator for database migration</li> 
 <li>Mocha, Chai, Supertest for testing</li> 
 <li>JSON Web Token and bcryptjs for user authentication / authorization</li> 
