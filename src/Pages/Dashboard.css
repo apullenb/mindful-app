@@ -205,6 +205,15 @@ transition: all .75s ease-out;
   color: #033755;
 }
 
+.food {
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+.food h2 {
+  font-size: 23px;
+  color: #01b8d8;
+}
 
 @media all and (max-width: 800px) {
   .show {

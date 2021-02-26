@@ -33,6 +33,7 @@ import {
 import config from "./config";
 
 import "./App.css";
+import Dash from "./Pages/Dash";
 
 library.add(faPlus, faCoffee, faStar, faBars);
 
@@ -96,7 +97,7 @@ const App = () => {
               path="/Dashboard"
               render={(props) =>
                 isAuthenticated ? (
-                  <Dashboard {...props} setAuth={setAuth} />
+                  <Dash {...props} setAuth={setAuth} />
                 ) : (
                   <Redirect to="/login" />
                 )
