@@ -124,24 +124,23 @@ async function getName() {
         <div>
             <div className="all">
         <section className="headline">
-        <p
+          <h2>Dashboard</h2>
+          <h2>Hello {name}!</h2>
+          <div style={{textAlign:"right"}}>
+            <p
               style={{
                 color: "white",
-                fontSize: "23px",
+                fontSize: "22px",
                 fontWeight: "600",
-                margin: "10px 2px",
+                margin: "2px 1px",
               }}
             >
               Today is: {dateToday}{" "}
             </p>
-          <h2>Dashboard</h2>
-          <h2>Hello {name}!</h2>
-          
-            
             <p>
-              <button onClick={(e) => logout(e)}>Log Out</button>
+              <button style={{fontSize:'14px'}} onClick={(e) => logout(e)}>Log Out</button>
             </p>
-          
+          </div>
         </section>
         <section>
             <Food />
