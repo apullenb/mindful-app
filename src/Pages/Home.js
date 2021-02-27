@@ -16,6 +16,7 @@ function Home() {
           </li>
         </ul>
       </section>
+      
       <section className="card">
         <header className="section-title">
           Record Daily Activities & Medicine
@@ -47,6 +48,7 @@ function Home() {
           health. Use the journal section to record your thoughts and just vent.
         </p>
       </section>
+    
       <div id="start-now">
         <header>
           <h3>Start Feeling Great Now!</h3>

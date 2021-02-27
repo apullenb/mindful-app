@@ -9,9 +9,11 @@ function Food() {
         const [show, setShow] = useState('')
 
     return (
-        <div className="">
-            <h4>Meals Today:</h4>
-            <button>+Add New</button>
+        <div className="food">
+            <p>Breakfast <button> +add </button></p>
+            <p>Lunch <button> +add </button></p>
+            <p>Dinner <button> +add </button></p>
+            <p>Snacks <button> +add </button></p>
 
         </div>
     )

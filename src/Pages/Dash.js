@@ -146,7 +146,8 @@ async function getName() {
             <div className='card'>
             {showToday()}
             </div>
-            <div className= 'card'>
+            <div className= 'card-dash'>
+              <h4>Meals Today</h4>
             <Food />
             </div>
         </section>
