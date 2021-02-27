@@ -23,11 +23,7 @@ h3 {
   font-weight: 700;
   color: #ffffff;
 }
-h4 {
-  font-size: 20px;
-  margin-top: 2px;
-  margin-bottom: 1px;
-}
+
 h5 {
   font-size: 18px;
   margin: 1px;
@@ -41,23 +37,21 @@ p {
     border: none;
     background-color: transparent;
     border-radius: 0px;
-    padding-top: 10px;
+    padding: 10px 1px;
     align-content: center;
-    
    } */
 .headline {
   display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  padding: 9px 1px;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
   background-color: #01b8d8;
   border: 1px;
   border-radius: 20px;
-  margin-top: 0px;
-  margin-bottom: 8px;
-  margin-left: 0px;
-  margin-right: 0px;
+ margin: 10px 1px;
  
 }
 
@@ -99,20 +93,13 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* margin-left: 10px;
-    margin-right: 10px; */
   align-content: center;
   background-color: #01b8d8;
   border-radius: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 0px;
-  margin-right: 0px;
-  
+  margin: 8px 0px;
 }
 
-.headline button,
-.today button {
+.headline button {
   background-color: floralwhite;
   color: #0b1f3a;
   border: 0px solid white;
@@ -205,15 +192,16 @@ transition: all .75s ease-out;
   color: #033755;
 }
 
-.food {
+/* .food {
 display: flex;
 flex-direction: row;
 justify-content: center;
+align-items: center;
 }
 .food h2 {
-  font-size: 23px;
-  color: #01b8d8;
-}
+  font-size: 26px;
+  color: #ffffff;
+} */
 
 @media all and (max-width: 800px) {
   .show {

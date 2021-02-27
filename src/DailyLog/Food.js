@@ -9,8 +9,8 @@ function Food() {
         const [show, setShow] = useState('')
 
     return (
-        <div>
-            <h2>What Did You Eat Today?</h2>
+        <div className="">
+            <h4>Meals Today:</h4>
             <button>+Add New</button>
 
         </div>

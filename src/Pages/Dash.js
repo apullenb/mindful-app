@@ -65,14 +65,14 @@ async function getName() {
       return (
         <div className="today-dash-none">
           <h4>
-            No Entries Yet Today.
+            No Entries Yet Today.</h4>
             <p> Don't forget to record your entry for today!</p>
             <Link
             to={{ pathname: "/LogNewEntry"}}>  <button style={{ margin: "15px", textAlign: "center" }} >
                   Record New Activity
                 </button></Link>
             <p>{' '}</p>
-          </h4>
+          
         </div>
       );
     } else {
@@ -132,22 +132,22 @@ async function getName() {
                 color: "white",
                 fontSize: "22px",
                 fontWeight: "600",
-                margin: "2px 1px",
+                margin: "10px 1px",
               }}
             >
               Today is: {dateToday}{" "}
             </p>
             <p>
-              <button style={{fontSize:'14px'}} onClick={(e) => logout(e)}>Log Out</button>
+              <button style={{fontSize:'14px',  margin:'1px 0px'}} onClick={(e) => logout(e)}>Log Out</button>
             </p>
           </div>
-        </section>
-        <section>
-            <Food />
         </section>
         <section className='row'>
             <div className='card'>
             {showToday()}
+            </div>
+            <div className= 'card'>
+            <Food />
             </div>
         </section>
         </div>
