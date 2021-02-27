@@ -57,7 +57,7 @@ h2 {
   font-weight: 650;
   text-align: center;
 }
-.card p {
+.card p, .card-dash p {
   color: #174163;
   font-size: 20px;
   font-weight: 500;

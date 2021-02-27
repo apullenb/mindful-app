@@ -201,12 +201,18 @@ transition: all .75s ease-out;
   padding: 10px;
   min-width: 30%;
 }
-.food {
+/* .food {
   display: flex;
-}
-.food p {
+  flex-wrap: wrap;
+  justify-content: space-around;
+} */
+.food-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
 margin: 4px 1px;
-padding: 2px 8px;
+padding: 2px 1px;
 border: #93b2bbd3 1px solid;
 }
 .food h4 {
@@ -215,9 +221,15 @@ border: #93b2bbd3 1px solid;
  
 }
 .food button {
-  padding: 4px 10px;
-  margin: 1px;
-  background-color:#bad7dfd3 ;
+  padding: 2px 8px;
+  margin: 3px 5px;
+  background-color:#bad7dfd3;
+  box-shadow: 1px 1px 2px 0px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.hide {
+  display: none;
 }
 
 @media all and (max-width: 800px) {
