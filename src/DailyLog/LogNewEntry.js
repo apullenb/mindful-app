@@ -2,13 +2,13 @@ import react, { useState } from "react";
 import { Redirect } from "react-router";
 import "../Forms/forms.css";
 import config from "../config";
+import Food from "./Food";
 
 function LogNewEntry(props) {
   
   const [inputs, setInputs] = useState({
     medicine: "",
     hours_slept: "0",
-    food: "",
     sugar_intake: "0",
     rate_focus: "3",
     rate_happiness: "3",
@@ -18,7 +18,6 @@ function LogNewEntry(props) {
   const {
     medicine,
     hours_slept,
-    food,
     sugar_intake,
     rate_focus,
     rate_happiness,
@@ -34,13 +33,12 @@ function LogNewEntry(props) {
     const body = {
       medicine,
       hours_slept,
-      food,
       sugar_intake,
       rate_focus,
       rate_happiness,
       rate_energy,
     };
-    if (medicine === "" || food === "" || hours_slept === "0") {
+    if (medicine === "" || hours_slept === "0") {
       return alert("Please fill out all fields");
     }
     const token = localStorage.getItem("token");
@@ -86,17 +84,6 @@ function LogNewEntry(props) {
           required
         />
         <label>
-          <span>What Did You Eat Today?</span>
-          <textarea
-            name="food"
-            required
-            onChange={(e) => onChange(e)}
-            value={food}
-            rows="5"
-            cols="25"
-          />
-        </label>
-        <label>
           <span>How Many Servings of Sugar Did You Eat Today?</span>
           <span>(From 0-5)</span>
         </label>
@@ -110,6 +97,11 @@ function LogNewEntry(props) {
         />
         <p className="valueDis">({sugar_intake} servings)</p>
           </form>
+          
+          <h3 style={{textAlign:'center'}}>What Did You Eat Today? </h3>
+          <section className='card'>
+          <Food />
+          </section>
           <h3 style={{textAlign:'center'}}>How Did You Feel Today? </h3>
           <form className ='log'>
           <label>

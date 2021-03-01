@@ -13,6 +13,7 @@ function Dash(props) {
 
     const [name, setName] = useState("");
     const [today, setToday] = useState("");
+    const [food, setFood] = useState('')
     const [all, setAll] = useState("");
 
    
@@ -54,6 +55,15 @@ async function getName() {
         (day) => moment(day.date).format("LL") == dateToday
       );
       setToday(thisDay[0]);
+      const responseF = await fetch(`${config.API_ENDPOINT}/api/food`, {
+        method: "GET",
+        headers: { token: localStorage.token },
+      });
+      const parseResF = await responseF.json();
+      const todayF = parseResF.filter(
+        (day) => moment(day.date).format("LL") == dateToday
+      );
+      setFood(todayF[0])
     } catch (error) {
       console.error(error.message);
     }
@@ -148,7 +158,7 @@ async function getName() {
             </div>
             <div className= 'card-dash'>
               <h4>Meals Today</h4>
-            <Food />
+            <Food food ={food} />
             </div>
         </section>
         </div>
