@@ -25,6 +25,7 @@ Journaling has been shown to have a positive effect on overall mental health. Us
 
 ***
 
+
 ## API Documentation:
 ### GET /api/activity 
 Retrieves all of the user's daily activity logs. Returns a response like the following:
