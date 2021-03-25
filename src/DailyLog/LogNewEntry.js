@@ -2,10 +2,11 @@ import react, { useState } from "react";
 import { Redirect } from "react-router";
 import "../Forms/forms.css";
 import config from "../config";
-import Food from "./Food";
+import Food from "./AddFood";
 
 function LogNewEntry(props) {
-  
+  const food = props.location.state
+  console.log(food)
   const [inputs, setInputs] = useState({
     medicine: "",
     hours_slept: "0",
@@ -100,7 +101,7 @@ function LogNewEntry(props) {
           
           <h3 style={{textAlign:'center'}}>What Did You Eat Today? </h3>
           <section className='card'>
-          <Food />
+          <Food food={food}/>
           </section>
           <h3 style={{textAlign:'center'}}>How Did You Feel Today? </h3>
           <form className ='log'>

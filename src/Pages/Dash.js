@@ -7,7 +7,7 @@ import "./Dashboard.css";
 import config from "../config";
 import moment from "moment";
 import LogNewEntry from "../DailyLog/LogNewEntry";
-import Food from "../DailyLog/Food";
+import Food from "../DailyLog/AddFood";
 
 function Dash(props) {
 
@@ -78,7 +78,7 @@ async function getName() {
             No Entries Yet Today.</h4>
             <p> Don't forget to record your entry for today!</p>
             <Link
-            to={{ pathname: "/LogNewEntry"}}>  <button style={{ margin: "15px", textAlign: "center" }} >
+            to={{ pathname: "/LogNewEntry", state: food}}>  <button style={{ margin: "15px", textAlign: "center" }} >
                   Record New Activity
                 </button></Link>
             <p>{' '}</p>

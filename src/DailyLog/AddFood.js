@@ -39,7 +39,7 @@ function Food(props) {
           }
         }
             
- //Create an empty database entry for the day
+ 
 
       //Handles form inputs  
     const onChangeB = e => setbreakfast(e.target.value)
