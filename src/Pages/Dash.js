@@ -96,10 +96,6 @@ async function getName() {
             <p> {today.medicine}</p>
           </div>
           <div>
-            <p id="title">Food:</p>
-            <p> {today.food}</p>
-          </div>
-          <div>
             <p id="title">Sleep:</p>
             <p> {today.hours_slept} hours</p>
           </div>

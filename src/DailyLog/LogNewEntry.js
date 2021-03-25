@@ -6,7 +6,7 @@ import Food from "./AddFood";
 
 function LogNewEntry(props) {
   const food = props.location.state
-  console.log(food)
+  
   const [inputs, setInputs] = useState({
     medicine: "",
     hours_slept: "0",
@@ -100,7 +100,7 @@ function LogNewEntry(props) {
           </form>
           
           <h3 style={{textAlign:'center'}}>What Did You Eat Today? </h3>
-          <section className='card'>
+          <section className='food-form'>
           <Food food={food}/>
           </section>
           <h3 style={{textAlign:'center'}}>How Did You Feel Today? </h3>

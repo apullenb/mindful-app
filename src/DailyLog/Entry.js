@@ -9,8 +9,8 @@ function Entry(props) {
 
   return (
     <div style={entryStyle}>
-      <h4>Date: {date}</h4>
-      <h4>Mood on This Day</h4>
+      <p>Date: {date}</p>
+      <p>Mood on This Day</p>
       <p>Happiness: {entry.rate_happiness}</p>
       <p>Focus: {entry.rate_focus}</p>
       <p>Energy: {entry.rate_energy}</p>
