@@ -15,6 +15,7 @@ function Dash(props) {
     const [today, setToday] = useState("");
     const [food, setFood] = useState('')
     const [all, setAll] = useState("");
+    const [journal, setJournal] = useState("hiddenz");
 
    
 
@@ -87,13 +88,10 @@ async function getName() {
       );
     } else {
       return (
-        <section>
+        <section className='today'>
           <div>
-            <div>
-              <p> </p>
-            </div>
             <p id="title">Medicine:</p>
-            <p> {today.medicine}</p>
+            <p id='content'> {today.medicine}</p>
           </div>
           <div>
             <p id="title">Sleep:</p>
@@ -120,6 +118,12 @@ async function getName() {
     }
   }
 
+  function showJournal() {
+    journal === "hiddenz"
+      ? setJournal("expand-journal")
+      : setJournal("hiddenz");
+      getToday();
+  }
 
   useEffect(() => {
     getName();
@@ -150,13 +154,34 @@ async function getName() {
         </section>
         <section className='row'>
             <div className='card'>
+              <h4>Your Day Today:</h4>
             {showToday()}
+            <Link
+            to={{ pathname: "/LogNewEntry", state: food}}>  <button>
+                  View Previous Days
+                </button></Link>
             </div>
-            <div className= 'card-dash'>
-              <h4>Meals Today</h4>
+            <div className= 'card'>
+              <h4>Meals Today:</h4>
             <Food food ={food} />
             </div>
+            <div className='card'>
+              <h4>Your Best Day Was:</h4>
+              {showRating()}
+              </div>
+              
         </section>
+        <div className=''>
+              <div className="show-journal" onClick={showJournal}>
+            {name}'s JOURNAL
+            <p>Click to View Your Journal Entries</p>
+          </div>
+          <section className={journal} >
+            <h6 onClick={showJournal}> X Close</h6>
+            <AllJournalEntries />
+            <h6 onClick={showJournal}> X Close</h6>
+          </section>
+              </div>
         </div>
     </div>
     )

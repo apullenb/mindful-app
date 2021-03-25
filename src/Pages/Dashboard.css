@@ -69,16 +69,27 @@ p {
   margin-bottom: 5px;
 }
 .today div {
-  margin: 1px;
+  margin: 3px;
   padding: 1px;
+  
 }
-.today #title {
-  font-size: 18px;
+ #title {
+  font-size: 19px;
   font-weight: 700;
+  color: #174163;
+  margin: 2px;
+  text-transform: uppercase;
+  border-top: 1px solid rgb(16, 159, 184);
+}
+
+ #content{
+  font-size: 18px;
+  font-weight: 500;
   color: #174163;
   border-bottom: 1px solid white;
   margin-bottom: 2px;
 }
+
 /* .col1 {
     background-color:#01b8d8;
     margin-bottom: 1%;
@@ -158,7 +169,7 @@ p {
   color: white;
 }
 .show-journal p {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   padding: 2px;
 }
@@ -166,12 +177,12 @@ p {
  display:none
 }
 .expand-journal {
-position: absolute;
+/* position: absolute; */
 background-color: #033755;
-z-index: 1;
-right: 5px;
-top:1%;
-width: 60%;
+/* z-index: 1; */
+/* right: 5px;
+top:1%; */
+width: 90%;
 transition: all .75s ease-out;
 
 }
